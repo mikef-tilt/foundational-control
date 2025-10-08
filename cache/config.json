@@ -1,7 +1,6 @@
 {
+    "iterations": 30,
     "sample_counts":[
-        80,
-        90,
         100,
         110,
         120,
