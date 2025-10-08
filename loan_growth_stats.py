@@ -3,8 +3,9 @@ import numpy as np
 import argparse
 import matplotlib.pyplot as plt
 
-def calculate_growth_stats(input_file, histogram_output):
+def calculate_growth_stats(input_file, histogram_output, summary_output):
     # Load the data
+    # input_file = '/Users/mike.fang/projects/analysis/foundational-control/cache/first_loans.parquet'
     df = pd.read_parquet(input_file)
 
     # Convert 'loan_predicted_at' to datetime objects
@@ -27,6 +28,10 @@ def calculate_growth_stats(input_file, histogram_output):
     # Replace inf values resulting from division by zero with 0
     weekly_growth.replace([np.inf, -np.inf], 0, inplace=True)
     avg_weekly_growth = weekly_growth.mean()
+    median_weekly_growth = weekly_growth.median()
+    std_weekly_growth = weekly_growth.std()
+    min_weekly_growth = weekly_growth.min()
+    max_weekly_growth = weekly_growth.max()
 
     # Group values > 100 into the 100 bin for visualization
     visual_growth = weekly_growth.copy()
@@ -50,9 +55,24 @@ def calculate_growth_stats(input_file, histogram_output):
     plt.savefig(histogram_output)
     print(f"Histogram saved to {histogram_output}")
 
+    # Output summary statistics to a text file
+    summary_stats = (
+        f"Loan Growth Summary Statistics:\n"
+        f"--------------------------------\n"
+        f"Average Weekly Growth: {avg_weekly_growth:.2f}%\n"
+        f"Standard Deviation of Weekly Growth: {std_weekly_growth:.2f}%\n"
+        f"Minimum Weekly Growth: {min_weekly_growth:.2f}%\n"
+        f"Maximum Weekly Growth: {max_weekly_growth:.2f}%\n"
+    )
+    with open(summary_output, 'w') as f:
+        f.write(summary_stats)
+    print(f"Summary stats saved to {summary_output}")
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Calculate first loan growth statistics.')
     parser.add_argument('--input', default='cache/first_loans.parquet', help='Input parquet file path.')
-    parser.add_argument('--histogram-output', default='weekly_growth_histogram.png', help='Output histogram file path.')
+    parser.add_argument('--histogram-output', default='plots/weekly_growth_histogram.png', help='Output histogram file path.')
+    parser.add_argument('--summary-output', default='loan_growth_summary.txt', help='Output summary statistics file path.')
     args = parser.parse_args()
-    calculate_growth_stats(args.input, args.histogram_output)
+    calculate_growth_stats(args.input, args.histogram_output, args.summary_output)
