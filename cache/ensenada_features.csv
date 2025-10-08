@@ -1,0 +1,152 @@
+prefix,feature,input,description,shap_rank
+loan,loan_amount_change_ratio,"loans, analyzed_at, user_created_at",Ratio of current loan amount to previous loan amount,1
+loan,loan_amount_sum_lifetime,"loans, analyzed_at, user_created_at",Sum of all loan amounts across user lifetime,2
+loan,loan_amount,"loans, analyzed_at, user_created_at",Current loan amount,3
+loan,loan_days_to_repay_minus_tenure_lag1,"loans, analyzed_at, user_created_at",Days to repay minus loan tenure for previous loan,4
+loan,loan_days_late_max_90d,"loans, analyzed_at, user_created_at",Maximum days late on loan repayment in last 90 days,5
+sms,sms_weighted_risk,android_sms,Risk-weighted score based on SMS sender analysis,6
+demographics,demographics_age_at_signup,"curp_identity, user_created_at",User age at time of account signup,7
+sms,sms_late_count_last_10d,android_sms,Count of late payment related SMS in last 10 days,8
+loan,loan_days_between_repaid_current,"loans, analyzed_at, user_created_at",Days between when previous loan was repaid and current loan was created,9
+cdc,cdc_acc_accounts_opened_12mo,credit_reports,Number of credit accounts opened in last 12 months from credit bureau,10
+survey,survey_activity,survey_response,Employment status from survey response,11
+apps,apps_loan,android_application_packages,Binary indicator for loan/financial apps installed,12
+loan,loan_days_repaid_to_next_lag1,"loans, analyzed_at, user_created_at",Days from repayment to next loan creation (previous loan),13
+survey,survey_credit_card_status,survey_response,"Credit card ownership status from survey: ""OwnACreditCard"", etc.",14
+loan,loan_days_repaid_to_next_avg_lifetime,"loans, analyzed_at, user_created_at",Average days from loan repayment to next loan across lifetime,15
+apps,apps_default_decile_4,android_application_packages,Binary indicator for apps in default risk decile 4,16
+sms,sms_utility_related,android_sms,Binary indicator for utility-related SMS,17
+apps,apps_default_decile_7,android_application_packages,Binary indicator for apps in default risk decile 7,18
+account,account_institution_name,accounts,Financial institution name from connected account,19
+loan,loan_days_to_repay_min_30d,"loans, analyzed_at, user_created_at",Minimum days to repay in last 30 days,20
+loan,loan_days_late_avg_90d,"loans, analyzed_at, user_created_at",Average days late on loan repayment in last 90 days,21
+survey,survey_paycheck_schedule.frequency.twice_a_month_days,survey_response,Days of month for twice-monthly paycheck from survey,22
+loan,loan_limit_change_avg_lifetime,"loans, analyzed_at, user_created_at",Average loan limit change across user lifetime,23
+android,android_network_link_up_bandwidth,android_network_capabilities,Network upload bandwidth from Android system,24
+sms,sms_loan_count_last_10d,android_sms,Count of loan-related SMS in last 10 days,25
+kyc,kyc_place_of_birth,kyc,Place of birth from KYC verification,26
+loan,loan_fee_rate_max_30d,"loans, analyzed_at, user_created_at",Maximum fee rate in last 30 days,27
+user,user_hours_since_created,"user_created_at, analyzed_at",Hours since user account was created,28
+cdc,cdc_acc_max_credit_limit_type_PP,credit_reports,Maximum credit limit for PP type accounts from credit bureau,29
+apps,apps_default_decile_9,android_application_packages,Binary indicator for apps in default risk decile 9,30
+cdc,cdc_acc_pct_accounts_under_1yr,credit_reports,Percentage of credit accounts under 1 year old from credit bureau,31
+amplitude,amplitude_os_version,amplitude_segment_identity,Operating system version from Amplitude tracking,32
+loan,loan_days_to_repay_min_90d,"loans, analyzed_at, user_created_at",Minimum days to repay in last 90 days,33
+apps,apps_default_decile_10,android_application_packages,Binary indicator for apps in default risk decile 10,34
+apps,apps_default_decile_2,android_application_packages,Binary indicator for apps in default risk decile 2,35
+app,app_com_baubap,android_application_packages,Binary indicator for specific app installed: com.baubap,36
+sms,sms_approved_related_address_count,android_sms,Count of loan approval related SMS per address,37
+apps,apps_default_decile_8,android_application_packages,Binary indicator for apps in default risk decile 8,38
+cdc,cdc_acc_days_since_last_account_opened,credit_reports,Days since last credit account was opened from credit bureau,39
+user,user_channel,user_channel,User acquisition channel,40
+survey,survey_residence_type,survey_response,Type of residence from survey (own/rent/family),41
+app,app_co_nelo_nelo,android_application_packages,Binary indicator for specific app installed: co.nelo.nelo,42
+survey,survey_empower_loan_repayment_timeline,survey_response,Ideal loan tenure from survey,43
+loan,loan_amount_avg_90d,"loans, analyzed_at, user_created_at",Average loan amount in last 90 days,44
+sms,sms_avg_loan_related_per_address,android_sms,Average loan-related SMS per address,45
+sms,sms_avg_late_related_per_address,android_sms,Average late payment related SMS per address,46
+survey,survey_debt_amount,survey_response,Outstanding debt amount from survey,47
+app,app_ai_powerup_stori,android_application_packages,Binary indicator for specific app installed: ai.powerup.stori,48
+amplitude,amplitude_device_model,amplitude_segment_identity,Device model from Amplitude tracking,49
+loan,loan_days_late_max_30d,"loans, analyzed_at, user_created_at",Maximum days late on loan repayment in last 30 days,50
+loan,loan_days_late_min_lifetime,"loans, analyzed_at, user_created_at",Minimum days late across all loans in user lifetime,51
+apps,apps_default_decile_3,android_application_packages,Binary indicator for apps in default risk decile 3,52
+survey,survey_outstanding_debt_health_status,survey_response,Health status of outstanding debt from survey,53
+apps,apps_install_age_interaction,android_application_packages,Interaction between app install age and other factors,54
+loan,loan_amount_ratio_second_over_first,"loans, analyzed_at, user_created_at",Ratio of second loan amount to first loan amount,55
+survey,survey_personal_ref_relationship_0,survey_response,Relationship type of first personal reference from survey,56
+cdc,cdc_acc_payment_frequency_monthly_count,credit_reports,Count of accounts with monthly payment frequency from credit bureau,57
+android,android_network_signal_strength,android_network_capabilities,Network signal strength from Android system,58
+kyc,kyc_address_city,kyc,City from KYC address,59
+sms,sms_utility_related_address_count,android_sms,Count of utility-related SMS per address,60
+sms,sms_count,android_sms,Total count of SMS messages,61
+android,android_phone_network_type,android_network_capabilities,Android network category,62
+survey,survey_empower_loan_usage,survey_response,Intended loan usage from survey,63
+survey,survey_paycheck_schedule.frequency.week_day,survey_response,Day of week for weekly paycheck from survey,64
+apps,apps_default_decile_5,android_application_packages,Binary indicator for apps in default risk decile 5,65
+loan,loan_tenure_final_lag1,"loans, analyzed_at, user_created_at",Final tenure of previous loan,66
+loan,loan_amount_ratio_over_max_lifetime,"loans, analyzed_at, user_created_at",Current loan amount divided by maximum loan amount in lifetime,67
+survey,survey_education_level,survey_response,Education level from survey response,68
+app,app_mx_com_tala,android_application_packages,Binary indicator for specific app installed: mx.com.tala,69
+apps,apps_median_real_installs,android_application_packages,Median number of real installs across user apps,70
+survey,survey_monthly_income,survey_response,Monthly income level from survey,71
+loan,loan_days_since_last_end_avg_lifetime,"loans, analyzed_at, user_created_at",Average between original due date and next disbursement across lifetime,72
+app,app_com_didiglobal_cashloan,android_application_packages,Binary indicator for specific app installed: com.didiglobal.cashloan,73
+amplitude,amplitude_screen_density,amplitude_segment_identity,Screen pixel density from Amplitude tracking,74
+android,android_phone_network_operator_name,android_network_capabilities,Android network feature: android_phone_network_operator_name,75
+survey,survey_monthly_income_ratio,survey_response,Monthly income to expense ratio from survey,76
+amplitude,amplitude_device_manufacturer,amplitude_segment_identity,Device manufacturer from Amplitude tracking,77
+loan,loan_days_since_last,"loans, analyzed_at, user_created_at",Days since last loan disbursed,78
+amplitude,amplitude_time_zone,amplitude_segment_identity,User timezone from Amplitude tracking,79
+survey,survey_credit_standing,survey_response,Self-reported credit standing from survey,80
+cdc,cdc_acc_median_credit_limit,credit_reports,Median credit limit across all accounts from credit bureau,81
+app,app_mx_aplazo_mobile_customer,android_application_packages,Binary indicator for specific app installed: mx.aplazo.mobile.customer,82
+loan,loan_limit_change_amount,"loans, analyzed_at, user_created_at",Loan limit change from lag2 to lag1,83
+sms,sms_late_related_count,android_sms,Total count of SMS messages tagged as late,84
+app,app_mx_bancosantander_supermovil,android_application_packages,Binary indicator for specific app installed: mx.bancosantander.supermovil,85
+app,app_com_coppel_coppelapp,android_application_packages,Binary indicator for specific app installed: com.coppel.coppelapp,86
+apps,apps_profession_and_education,android_application_packages,Binary indicator for professional/educational apps installed,87
+loan,loan_days_since_last_limit_decrease,"loans, analyzed_at, user_created_at",Days since last loan limit decrease,88
+loan,loan_late_fee_avg_lifetime,"loans, analyzed_at, user_created_at",Average late fee across all loans in lifetime,89
+address,address_zip_zone,"addresses, kyc",Zone classification based on postal code,90
+loan,loan_days_repaid_to_next_min_90d,"loans, analyzed_at, user_created_at",Minimum days from repayment to next loan in last 90 days,91
+cdc,cdc_acc_min_credit_limit_type_CC,credit_reports,Minimum credit limit for CC type accounts from credit bureau,92
+survey,survey_personal_ref_relationship_1,survey_response,Relationship type of second personal reference from survey,93
+loan,loan_days_between_first_end_second,"loans, analyzed_at, user_created_at",Days between first loan due date and second loan disbursement,94
+apps,apps_productivity,android_application_packages,Binary indicator for productivity apps installed,95
+apps,apps_shopping,android_application_packages,Binary indicator for shopping apps installed,96
+app,app_com_fintopia_mxcredmex,android_application_packages,Binary indicator for specific app installed: com.fintopia.mxcredmex,97
+loan,loan_count_90d,"loans, analyzed_at, user_created_at",Number of loans in last 90 days,98
+app,app_mx_klar_app,android_application_packages,Binary indicator for specific app installed: mx.klar.app,99
+cdc,cdc_inq_avg_credit_amount_3mo,credit_reports,Average credit inquiry amount in last 3 months from credit bureau,100
+loan,loan_days_between_loans_lag1,"loans, analyzed_at, user_created_at",Days between previous loan disbursement and loan before that disbursement,101
+loan,loan_limit_change_ratio_avg_30d,"loans, analyzed_at, user_created_at",Average ratio of loan limit changes in last 30 days,102
+app,app_com_mercadolibre,android_application_packages,Binary indicator for specific app installed: com.mercadolibre,103
+loan,loan_days_repaid_to_next_max_90d,"loans, analyzed_at, user_created_at",Maximum days from repayment to next loan in last 90 days,104
+apps,apps_investment,android_application_packages,Binary indicator for investment apps installed,105
+kyc,kyc_address_line2_start,kyc,Starting pattern of address line 2 from KYC,106
+kyc,kyc_zip_zone,kyc,Zone classification based on KYC postal code,107
+android,android_network_link_speed,android_network_capabilities,Network link speed from Android system,108
+loan,loan_days_repaid_to_next_min_30d,"loans, analyzed_at, user_created_at",Minimum days from repayment to next loan in last 30 days,109
+apps,apps_rank_install_ratio,android_application_packages,Ratio of app ranking to install counts,110
+loan,loan_fee_rate_change_lag1,"loans, analyzed_at, user_created_at",Change in fee rate 1 period ago,111
+android,android_network_capabilities,android_network_capabilities,Network capabilities from Android system,112
+loan,loan_fee_rate_change_lag2,"loans, analyzed_at, user_created_at",Change in fee rate 2 periods ago,113
+app,app_com_mercadopago_wallet,android_application_packages,Binary indicator for specific app installed: com.mercadopago.wallet,114
+cdc,cdc_inq_count_type_F_3mo,credit_reports,Count of F-type credit inquiries in last 3 months from credit bureau,115
+survey,survey_credit_loan_ideal_amount,survey_response,Ideal loan amount from survey response,116
+apps,apps_banking,android_application_packages,Binary indicator for banking apps installed,117
+cdc,cdc_inq_count_type_M_15d,credit_reports,Count of M-type credit inquiries in last 15 days from credit bureau,118
+app,app_org_telegram_messenger,android_application_packages,Binary indicator for specific app installed: org.telegram.messenger,119
+cdc,cdc_inq_num_credit_inquiries_1mo,credit_reports,Number of credit inquiries in last 1 month from credit bureau,120
+apps,apps_default_decile_1,android_application_packages,Binary indicator for apps in default risk decile 1,121
+cdc,cdc_acc_revolving_to_fixed_account_ratio,credit_reports,Ratio of revolving to fixed credit accounts from credit bureau,122
+user,user_names_levenshtein,"user_details, curp_identity",Levenshtein distance between user provided names and CURP names,123
+survey,survey_residence_stay_length,survey_response,Length of stay at current residence from survey,124
+app,app_edenred_mx_mobile_services,android_application_packages,Binary indicator for specific app installed: edenred.mx.mobile.services,125
+loan,loan_is_late_pct_90d,"loans, analyzed_at, user_created_at",Percentage of loans that were late in last 90 days,126
+app,app_com_elaworld_mexloan,android_application_packages,Binary indicator for specific app installed: com.elaworld.mexloan,127
+loan,loan_days_to_repay_avg_lifetime,"loans, analyzed_at, user_created_at",Average days to repay across all loans in lifetime,128
+cdc,cdc_acc_min_credit_limit_type_PP,credit_reports,Minimum credit limit for PP type accounts from credit bureau,129
+loan,loan_days_late_lag2_over_lag1_ratio,"loans, analyzed_at, user_created_at",Ratio of days late on loan 2 periods ago to 1 period ago,130
+loan,loan_days_between_loans_avg_90d,"loans, analyzed_at, user_created_at",Average days between consecutive loans in last 90 days,131
+app,app_mx_com_cfe_cfecontigo,android_application_packages,Binary indicator for specific app installed: mx.com.cfe.cfecontigo,132
+loan,loan_repayment_date_changes_pct_lifetime,"loans, analyzed_at, user_created_at",Percentage of loans with repayment date changes across lifetime,133
+sms,sms_money_spent_related,android_sms,SMS related to money spending activity,134
+address,address_zip_region,"addresses, kyc",Region derived from postal/zip code,135
+cdc,cdc_acc_max_credit_limit_type_TC,credit_reports,Maximum credit limit for TC type accounts from credit bureau,136
+address,address_street_type,"addresses, kyc","Type of street (avenue, street, etc.)",137
+kyc,kyc_address_line1_start,kyc,Starting pattern of address line 1 from KYC,138
+loan,loan_fee_amount_lag2_over_lag1_ratio,"loans, analyzed_at, user_created_at",Change in fee amount from 2 loans ago to previous loan,139
+user,user_source,attribution,User traffic source,140
+apps,apps_trading,android_application_packages,Binary indicator for trading apps installed,141
+loan,loan_days_since_last_end_min_lifetime,"loans, analyzed_at, user_created_at",Minimum days since last loan ended across lifetime,142
+cdc,cdc_inq_days_since_last_inquiry,credit_reports,Days since last credit inquiry from credit bureau,143
+apps,apps_median_ranking,android_application_packages,Median ranking of installed apps,144
+app,app_com_ubercab_driver,android_application_packages,Binary indicator for specific app installed: com.ubercab.driver,145
+loan,loan_limit_change_max_lifetime,"loans, analyzed_at, user_created_at",Maximum loan limit change in user lifetime,146
+user,user_af_channel,user_channel,User acquisition channel,147
+loan,loan_days_between_loans_max_lifetime,"loans, analyzed_at, user_created_at",Maximum days between consecutive loans in user lifetime,148
+app,app_com_whatsapp_w4b,android_application_packages,Binary indicator for specific app installed: com.whatsw4b,149
+user,user_other_surnames_levenshtein,"user_details, curp_identity",Levenshtein distance between user provided names and CURP names,150
+loan,loan_days_between_loans_max_30d,"loans, analyzed_at, user_created_at",Maximum days between consecutive loans in last 30 days,151
