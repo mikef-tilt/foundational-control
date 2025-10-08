@@ -1,0 +1,7 @@
+Loan Growth Summary Statistics:
+--------------------------------
+Average Weekly Growth: 11.56%
+Median Weekly Growth: 0.00%
+Standard Deviation of Weekly Growth: 51.64%
+Minimum Weekly Growth: -69.92%
+Maximum Weekly Growth: 314.37%
